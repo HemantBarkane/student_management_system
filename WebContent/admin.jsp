@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<spr:form action="admin_login" commandName="admin" >
+<spr:form action="admin_login" commandName="admin" align="center" >
 <table>
 <tr>
 <td>UserName</td>

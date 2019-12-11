@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="add_student">Add_Student</a>
+student home
 </body>
 </html>

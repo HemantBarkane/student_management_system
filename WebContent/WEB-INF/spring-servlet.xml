@@ -31,10 +31,10 @@
 		</property>
 		<property name="annotatedClasses">
 			<array>
-				<value>com.example.dto.Admin</value>	
+				<value>com.example.dto.Admin</value>
+				<value>com.example.dto.Student</value>	
 			</array>
 		</property>
-		
 	</bean>	
 		<bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate" autowire="byName">
 		</bean>
