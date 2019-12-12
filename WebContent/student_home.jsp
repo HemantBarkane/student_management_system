@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-student home
+<a href="student_page_list">LIST</a>
 </body>
 </html>

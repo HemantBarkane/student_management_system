@@ -18,6 +18,10 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	public Student(int sId) {
+		super();
+		this.sId = sId;
+	}
 	public int getsId() {
 		return sId;
 	}

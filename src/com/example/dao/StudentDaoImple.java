@@ -1,5 +1,7 @@
 package com.example.dao;
 
+import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -31,6 +33,40 @@ public class StudentDaoImple implements StudentDao{
 			}
 		});
 		
+	}
+
+	@Override
+	public List<Student> showAll() {
+		List<Student> alist = hibernateTemplate.execute(new HibernateCallback<List<Student>>() {
+
+			@Override
+			public List<Student> doInHibernate(Session session) throws HibernateException {
+				Transaction t = session.beginTransaction();
+				Query q = session.createQuery("from Student");
+				List<Student> li = q.list();
+				t.commit();
+				session.flush();
+				session.close();
+				return li;
+			}
+		});
+		return alist;
+	}
+
+	@Override
+	public void deleteStudent(int sId) {
+		hibernateTemplate.execute(new HibernateCallback<Void>() {
+
+			@Override
+			public Void doInHibernate(Session session) throws HibernateException {
+				Transaction t = session.beginTransaction();
+				session.delete(new Student(sId));
+				t.commit();
+				session.flush();
+				session.close();
+				return null;
+			}
+		});	
 	}
 
 }

@@ -8,5 +8,7 @@
 </head>
 <body>
 <a href="add_student">Add_Student</a>
+<a href="student_page_list">SHOW LIST</a>
+
 </body>
 </html>
